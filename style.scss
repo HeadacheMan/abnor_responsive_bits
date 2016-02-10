@@ -1,0 +1,700 @@
+/*
+Theme Name: Abnor
+Description:  Site destinado para o projeto Visite Abnor
+Author: Zaez Team
+Author URI: http://www.zaez.net/
+Theme URI: http://www.zaez.net/
+Version: 1.0.0
+License: Zaez Private License
+Text Domain: abnor
+*/
+
+/*-------- Fonts ---------*/
+@font-face {
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Bebas Neue'), url('assets/fonts/BebasNeue.woff') format('woff');
+}
+
+body {
+  margin-top: 50px;
+  font-family: 'Bebas Neue', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #000;
+  a{
+    outline: 0;
+    &:hover{
+      text-decoration: none !important;
+    }
+  }
+  ul{
+    list-style: none;
+  }
+  .nav a { transition: none;}
+  .header-secondary { background-color: #fff; }
+  .header-center nav { margin-bottom: 50px;}
+  .bg-en{
+    background-image: url(assets/images/all-in-one-en2.png);
+    outline: 0;
+  }
+  .bg-br{
+    background-image: url(assets/images/all-in-one-br1.png);
+    outline: 0;
+  }
+
+  // Main page Logo
+  .logo{
+    a{
+      display: block;
+      text-align: center;
+      img{
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+// Homepage Style for better displaying of comic image
+body.home{
+  section.wrapper-content{
+    aside.container{
+      width: 100%;
+      .hqimg{
+        p{
+          del{
+            img{
+              display: block;
+              margin: 0 auto;
+              max-width: 100%;
+              height: auto;
+            }
+          }
+        }
+        &.full-size{
+          p{
+            margin: 0;
+            overflow: auto;
+            width: 100%;
+            height: 480px;
+            del{
+              img{
+                width: 1501px;
+                max-width: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+footer {
+  margin-top: 200px;
+  margin-left: 25px;
+  margin-right: 25px;
+  font-family: 'PT Sans', sans-serif;
+  color: #000;
+}
+
+.site-text a{
+  color: #000;
+  outline: 0;
+}
+
+.site-text a:hover{
+  color: #666;
+  outline: 0;
+}
+
+.facebook-icon {
+  display: block;
+  width: 84px;
+  height: 84px;
+  background-position: -484px 0px;
+}
+
+.twitter-icon {
+  position: relative;
+  display: block;
+  width: 85px;
+  height: 84px;
+  background-position: -480px -84px;
+}
+
+.twitter-icon::before {
+  content: url(assets/images/detalhe-twitter.png);
+  position: absolute;
+  pointer-events: none;
+  right: 64px;
+  bottom: 24px;
+}
+
+/* 2. Social-icons colored (hover) */
+
+.facebook-icon:hover {
+  display: block;
+  width: 84px;
+  height: 84px;
+  background-position: -568px 1px
+}
+
+.twitter-icon:hover {
+  display: block;
+  width: 85px;
+  height: 84px;
+  background-position: -568px -84px;
+}
+
+/* 3. Position */
+li.col-lg-2.social_network {
+  float: right;
+  margin: 10px;
+  width:84px;
+
+}
+.copyright {
+  margin-top: 100px;
+}
+/**
+ * Pagination
+ *
+ * 1. Configuration
+ * 2. Arrows
+ * 3. Arrows colored (hover)
+ * 4. Wind Rose
+ * 5. Directions
+ */
+
+/* 1. Configuration */
+
+ul.directional {
+  padding: 0;
+  text-align: center;
+}
+ul.directional li { display: inline-block; }
+ul.directional li:not(.img-of-center) { margin-bottom: 65px; }
+ul.directional a{ outline: 0; }
+
+
+.cursor-default {
+  cursor: default;
+  opacity: 0.5;
+  pointer-events: none;
+
+}
+
+.big-arrow {
+  display: block;
+  width: 96px;
+  height: 38px;
+  /*background-position: -556px -179px;*/
+  background-position: -556px -221px;
+}
+
+.small-arrow {
+  display: block;
+  width: 76px;
+  height: 38px;
+  /*background-position: -480px -179px;*/
+  background-position: -480px -217px;
+
+}
+
+
+/* 4. Wind Rose */
+
+.wind-rose {
+  display: block;
+  width: 166px;
+  height: 166px;
+  background-position: -328px -428px;
+}
+
+/* 5. Directions */
+
+.arrow.left-arrow {
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+
+.arrow.right-arrow {
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+}
+
+/**
+ * Comic
+ *
+ * 1. Comic config
+ * 2. title config
+ * 3. Arrows colored (hover)
+ * 4. Wind Rose
+ * 5. Directions
+ */
+
+
+.img-responsive{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.titlepag {
+  margin: 100px auto 0px;
+  h3{
+    font-size: 40px;
+    text-align: center;
+    span.numpag{
+      display: none;
+    }
+  }
+}
+
+.no-width {
+  width:100%;
+}
+
+/**
+* Lang Selector
+*
+* 1. Lang selector icons
+* 2. lang selector:hover
+* 3. position
+*/
+
+/* 1. Lang selector icons */
+
+.header-secondary {
+  float: right;
+}
+
+#lang_sel_list img.iclflag {
+  width: 107px;
+  height: 68px;
+}
+
+.lang_sel_list_horizontal ul li {
+  display: inline-block;
+  width: 107px;
+  height: 68px;
+  margin-right: 20px;
+}
+
+.lang_sel_list_horizontal ul li a,
+.lang_sel_list_horizontal ul li a:hover {
+  text-decoration: none;
+  outline: 0;
+}
+
+li.menu-item.menu-item-language img.iclflag {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 107px !important;
+  height: 69px !important;
+}
+
+li.icl-en a img {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(assets/images/leia-en.png) no-repeat;
+  background-position: 0px 0px;
+  padding-left: 107px;
+}
+
+li.icl-pt-br {
+  margin-right:10px;
+}
+
+li.icl-pt-br a img {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: url(assets/images/leia-pt.png) no-repeat;
+  background-position: 0px 0px;
+  padding-left: 107px;
+
+}
+
+div#lang_sel_list ul li:last-child,
+ul.nav.nav-horizontal li.menu-item-language:last-child {
+  top: 8px;
+  position: relative;
+}
+
+/* 2. Lang selector:hover */
+li.menu-item.menu-item-language img.iclflag:hover,
+a.lang_sel_sel img:hover,
+a.lang_sel_other img:hover { background-position: 0px -69px;}
+
+/*
+---------
+ Archive
+   Additional CSS Styles for
+   both page-arquivo and page-archive.
+---------
+*/
+li.archive-list {
+  font-size: 24px;
+  font-weight: 700;
+  list-style: none;
+  border-bottom: 1px dashed #C2C2C2;
+  margin-bottom: 9px;
+}
+
+.archive-list a{
+  outline: 0;
+}
+.page-title {
+  padding-left: 20px;
+}
+span.page-number.f-r {
+  float: right;
+}
+
+a.title-archive {
+  color: #000;
+  text-decoration: none;
+}
+a.title-archive:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+/*
+---------
+ Spare
+   Additional CSS Styles for
+   both page-doacao and page-spare.
+---------
+*/
+.spare-text {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: #000;
+  margin-top: 10px;
+  margin-bottom:10px;
+  padding: 0 190px;
+}
+
+.titlepag-spare {
+  padding: 0 190px;
+}
+
+.last {
+  margin-bottom: 50px;
+}
+
+.border-spare {
+  background-image: url(assets/images/border-spare.png);
+  width: 762px;
+  height: 611px;
+  margin: 20px auto 0px;
+}
+
+.spare {
+  background-image: url(assets/images/all-in-one-spare1.png);
+  background-repeat: no-repeat;
+  margin: 0;
+  position: relative;
+}
+/* Detail for the Unlock logo */
+.unlock-spare::before {
+  content: url(assets/images/unlock-detail.png) !important;
+  width: 165px;
+  height: 165px;
+  pointer-events: none;
+  position: absolute;
+  left: 230px;
+  bottom: 55px;
+}
+
+.unlock-spare {
+  background-position: 0px 0px;
+  width: 279px;
+  height: 172px;
+  top: 100px;
+  left: 50px;
+
+}
+
+.unlock-spare:hover {
+  background-position: 0px -231px;
+  width: 279px;
+  height: 172px;
+}
+/*Detail for the Patreon logo*/
+.patreon-spare::before {
+  content: url(assets/images/patreon-detail.png) !important;
+  width: 287px;
+  height: 134px;
+  pointer-events: none;
+  position: absolute;
+  right: 160px;
+  top: 100px;
+}
+
+
+.patreon-spare {
+  background-position: -300px 0;
+  width: 198px;
+  height: 221px;
+  top: 10px;
+  left: 430px;
+}
+
+.patreon-spare:hover {
+  background-position: -300px -231px;
+  width: 198px;
+  height: 221px;
+}
+/* Detail for the PayPal logo*/
+.paypal-spare::before{
+  content: url(assets/images/paypal-detail.png) !important;
+  width: 156px;
+  height: 114px;
+  pointer-events: none;
+  position: absolute;
+  left: 115px;
+  top: 110px;
+}
+
+.paypal-spare {
+  background-position: -528px 0;
+  width: 165px;
+  height: 165px;
+  bottom: 50px;
+  left: 180px;
+  border:0;
+}
+
+/* Button transparency */
+.paypal-spare input[type="submit"]{
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  width: 165px;
+  height: 165px;
+}
+
+.paypal-spare:hover {
+  background-position: -526px -230px;
+  width: 165px;
+  height: 165px;
+}
+/*  Visual Container additional styling    */
+/*  Remove the author's name margin, set   */
+/*  new font and match the container width */
+
+.wpb_wrapper h3{
+  margin-left: 0;
+}
+
+.wpb_wrapper p{
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  color: #000;
+}
+
+.vc_column-inner {
+  margin:0 auto;
+}
+
+// Default screen sizes
+@media (min-width: 1200px){
+
+}
+
+// Medium screen sizes
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+// Small screen sizes
+@media (min-width: 769px) {
+  body{
+    // Settings for menu backgrounds
+    &.en{
+      .menu-item-67 a,
+      .menu-item-68 a,
+      .menu-item-69 a,
+      .bg-en{
+        background-image: url(assets/images/all-in-one-en2.png);
+        outline: 0;
+      }
+    }
+    &.pt-br{
+      .menu-about a,
+      .menu-item-56 a,
+      .menu-item-57 a,
+      .menu-item-58 a,
+      .bg-br{
+        background-image: url(assets/images/all-in-one-br1.png);
+        outline: 0;
+      }
+    }
+    // Main navigation menu
+    ul.menu{
+      margin: 0 auto;
+      padding: 0;
+      width: 728px;
+      li{
+        display: inline-table;
+        position: relative;
+        &:before { position: absolute; }
+        &:after { position: relative; }
+        &:before, &:after{
+          pointer-events: none;
+        }
+
+        // Decorações nos menus de navegação
+        &.menu-item-58:before,
+        &.menu-item-67:before {
+          content: url(assets/images/detalhe1.png);
+          top: 30px;
+          right: 170px;
+        }
+        &.menu-item-58:after,
+        &.menu-item-67:after {
+          content: url(assets/images/detalhe4.png);
+          bottom: 20px;
+          left: 50px;
+        }
+        &.menu-item-57:before,
+        &.menu-item-68:before {
+          content: url(assets/images/detalhe3.png);
+          top: 30px;
+          right: 31px;
+        }
+        &.menu-item-56:after,
+        &.menu-item-69:after {
+          content: url(assets/images/detalhe2.png);
+          bottom: 30px;
+          left: 50px;
+        }
+
+        // Sobre pt-br: menu-item-58
+        // Sobre en: menu-item-67
+        &.menu-item-58 a,
+        &.menu-item-67 a {
+          background-position: 0 0;
+          width: 163px;
+          height: 198px;
+          margin-top: 50px;
+          margin-right: 80px;
+        }
+        &.menu-item-58 a:hover { background-position: 0px -204px; }
+        &.menu-item-67 a:hover { background-position: 0px -208px; }
+
+        // Arquivo pt-br: menu-item-57
+        // Arquivo en: menu-item-68
+        &.menu-item-57 a,
+        &.menu-item-68 a {
+          width: 242px;
+          height: 198px;
+          margin-top: 75px;
+        }
+        &.menu-item-57 a{
+          background-position: -179px 0;
+          &:hover {  background-position: -179px -204px;}
+        }
+        &.menu-item-68 a{
+          background-position: -169px 0;
+          &:hover{ background-position: -169px -204px; }
+        }
+
+        // Esmola pt-br: menu-item-56
+        // Esmola en: menu-item-69
+        &.menu-item-56 a,
+        &.menu-item-69 a{
+          background-position: 0px -410px;
+          width: 155px;
+          height: 184px;
+          margin-top: 30px;
+          margin-left: 80px;
+          &:hover{
+            background-position: -168px -410px;
+          }
+        }
+        a{
+          display: block;
+          text-indent: -9000px;
+        }
+      }
+    }
+  }
+}
+
+// Extra small screen sizes
+@media (max-width: 768px) {
+  ul.menu{
+    padding: 0;
+    margin: 30px 0;
+    display: table;
+    width: 100%;
+    li{
+      display: table-cell;
+      width: 33%;
+      a{
+        display: block;
+        font-size: 3em;
+        text-align: center;
+        color: #000;
+        &:hover{
+          color: #D12E2E;
+        }
+      }
+    }
+  }
+
+  // That shit thingy called page title
+  .titlepag{
+    margin: 25px 0 0 0;
+  }
+}
+
+// Cellphone Bullshits!
+@media (max-width: 414px){
+  body{
+    margin-top: 15px;
+  }
+
+  // Language selector
+  .lang_sel_list_horizontal{
+    margin-bottom: 25px;
+    ul{
+      padding: 0;
+      display: table;
+      width: 100%;
+      li{
+        width: 50%;
+        display: table-cell;
+        text-align: center;
+      }
+    }
+  }
+
+  // Main navigation
+  ul.menu{
+    display: block;
+    margin: 15px 0;
+    li{
+      display: block;
+      width: 100%;
+      a {
+        display: block;
+        text-align: center;
+      }
+      &:nth-child(2){
+        border-top: 1px dashed #e1e1e1;
+        border-bottom: 1px dashed #e1e1e1;
+      }
+    }
+  }
+
+  // That shit thingy called page title
+  .titlepag{
+    margin: 0;
+  }
+}
