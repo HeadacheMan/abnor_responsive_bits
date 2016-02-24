@@ -50,71 +50,57 @@ body.home section.wrapper-content aside.container {
     margin: 0 auto;
     max-width: 100%;
     height: auto; }
-  body.home section.wrapper-content aside.container .hqimg.full-size p {
-    margin: 0;
-    overflow: auto;
-    width: 100%;
-    height: 480px; }
-    body.home section.wrapper-content aside.container .hqimg.full-size p del img {
-      width: 1501px;
-      max-width: none; }
+  body.home section.wrapper-content aside.container .hqimg.full-size {
+    margin: 0 15px;
+    box-shadow: 1px 1px 1px 1px #000; }
+    body.home section.wrapper-content aside.container .hqimg.full-size p {
+      margin: 0;
+      overflow: auto;
+      width: 100%;
+      height: 480px; }
+      body.home section.wrapper-content aside.container .hqimg.full-size p del img {
+        width: 1501px;
+        max-width: none; }
 
 footer {
   margin-top: 200px;
-  margin-left: 25px;
-  margin-right: 25px;
   font-family: 'PT Sans', sans-serif;
   color: #000; }
+  footer .container .row {
+    margin-bottom: 20px; }
+    footer .container .row .site-text {
+      text-align: right; }
+      footer .container .row .site-text a {
+        color: #000;
+        outline: 0; }
+        footer .container .row .site-text a:hover {
+          color: #666; }
 
-.site-text a {
-  color: #000;
-  outline: 0; }
-
-.site-text a:hover {
-  color: #666;
-  outline: 0; }
-
-.facebook-icon {
-  display: block;
-  width: 84px;
-  height: 84px;
-  background-position: -484px 0px; }
-
-.twitter-icon {
-  position: relative;
-  display: block;
-  width: 85px;
-  height: 84px;
-  background-position: -480px -84px; }
-
-.twitter-icon::before {
-  content: url(assets/images/detalhe-twitter.png);
-  position: absolute;
-  pointer-events: none;
-  right: 64px;
-  bottom: 24px; }
-
-/* 2. Social-icons colored (hover) */
-.facebook-icon:hover {
-  display: block;
-  width: 84px;
-  height: 84px;
-  background-position: -568px 1px; }
-
-.twitter-icon:hover {
-  display: block;
-  width: 85px;
-  height: 84px;
-  background-position: -568px -84px; }
-
-/* 3. Position */
-li.col-lg-2.social_network {
-  float: right;
-  margin: 10px;
-  width: 84px; }
-
-.copyright {
-  margin-top: 100px; }
+ul.social-list {
+  display: inline; }
+  ul.social-list li {
+    display: inline-block; }
+    ul.social-list li a {
+      display: block; }
+      ul.social-list li a.facebook-icon {
+        width: 84px;
+        height: 84px;
+        background-position: -484px 0px; }
+        ul.social-list li a.facebook-icon:hover {
+          background-position: -568px 1px; }
+      ul.social-list li a.twitter-icon {
+        position: relative;
+        width: 85px;
+        height: 84px;
+        background-position: -480px -84px; }
+        ul.social-list li a.twitter-icon:hover {
+          background-position: -568px -84px; }
+        ul.social-list li a.twitter-icon:before {
+          content: url(assets/images/detalhe-twitter.png);
+          position: absolute;
+          pointer-events: none;
+          left: -107px;
+          bottom: 24px; }
 
 /**
  * Pagination
@@ -225,11 +211,11 @@ ul.directional a {
   width: 107px;
   height: 68px;
   margin-right: 20px; }
-
-.lang_sel_list_horizontal ul li a,
-.lang_sel_list_horizontal ul li a:hover {
-  text-decoration: none;
-  outline: 0; }
+  .lang_sel_list_horizontal ul li:last-child {
+    margin-right: 0; }
+  .lang_sel_list_horizontal ul li a, .lang_sel_list_horizontal ul li a:hover {
+    text-decoration: none;
+    outline: 0; }
 
 li.menu-item.menu-item-language img.iclflag {
   -moz-box-sizing: border-box;
@@ -513,6 +499,31 @@ a.title-archive:hover {
         color: #000; }
         ul.menu li a:hover {
           color: #D12E2E; }
+  body.home section.wrapper-content aside.container {
+    width: 100%; }
+    body.home section.wrapper-content aside.container .hqimg p {
+      position: relative; }
+      body.home section.wrapper-content aside.container .hqimg p:before {
+        content: 'Clique para ver em tamanho real';
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        z-index: 1000;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        font-size: 1.7em;
+        text-align: center;
+        width: 100%; }
+      body.home section.wrapper-content aside.container .hqimg p del:after {
+        content: ' ';
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        width: 95%;
+        height: 95%;
+        background: rgba(250, 250, 250, 0.8);
+        border: 1px solid #efefef; }
   .titlepag {
     margin: 25px 0 0 0; } }
 
@@ -529,6 +540,17 @@ a.title-archive:hover {
         width: 50%;
         display: table-cell;
         text-align: center; }
+  ul.social-list {
+    padding: 0;
+    display: table;
+    width: 100%; }
+    ul.social-list li {
+      width: 50%;
+      display: table-cell;
+      text-align: center; }
+      ul.social-list li a {
+        position: initial;
+        margin: 0 auto; }
   ul.menu {
     display: block;
     margin: 15px 0; }
@@ -542,4 +564,6 @@ a.title-archive:hover {
         border-top: 1px dashed #e1e1e1;
         border-bottom: 1px dashed #e1e1e1; }
   .titlepag {
-    margin: 0; } }
+    margin: 0; }
+  footer .container .row .site-text {
+    text-align: left; } }
