@@ -31,3 +31,13 @@ node_modules
 
 # Optional REPL history
 .node_repl_history
+.idea/.name
+.idea/abnor_responsive_bits.iml
+.idea/encodings.xml
+.idea/jsLibraryMappings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/watcherTasks.xml
+.idea/workspace.xml
+.idea/libraries/abnor_responsive_bits_node_modules.xml
