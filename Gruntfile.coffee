@@ -4,7 +4,7 @@ module.exports = (grunt) ->
     sass:
       dist:
         files:
-          'styles.css' : 'style.scss'
+          'style.css' : 'style.scss'
 
   grunt.loadNpmTasks 'grunt-sass'
   grunt.registerTask 'default', ['sass']

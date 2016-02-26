@@ -54,42 +54,41 @@ body {
   }
 }
 
-// Homepage Style for better displaying of comic image
-body.home{
-  section.wrapper-content{
-    aside.container{
-      width: 100%;
-      .hqimg{
+// HQ Image
+.hq-container{
+  text-align: center;
+  h1{
+    font-size: 4em;
+  }
+  .hq-image{
+    p{
+      text-align: center;
+      img{
+        max-width: 100%;
+        width: auto !important;
+        height: auto !important;
+        margin: 0 auto;
+      }
+    }
+    &.full-size{
+      margin: 0 15px;
+      box-shadow: 0px 0px 12px -1px #000;
+      .img-wrapper{
+        margin: 0;
+        overflow: auto;
+        width: 100%;
+        height: 480px;
         p{
-          del{
-            img{
-              display: block;
-              margin: 0 auto;
-              max-width: 100%;
-              height: auto;
-            }
-          }
-        }
-        &.full-size{
-          margin: 0 15px;
-          box-shadow: 1px 1px 1px 1px #000;
-          p{
-            margin: 0;
-            overflow: auto;
-            width: 100%;
-            height: 480px;
-            del{
-              img{
-                width: 1501px;
-                max-width: none;
-              }
-            }
+          img{
+            width: 1501px;
+            max-width: none;
           }
         }
       }
     }
   }
 }
+
 
 
 footer {
@@ -242,9 +241,6 @@ ul.directional a{ outline: 0; }
   }
 }
 
-.no-width {
-  width:100%;
-}
 
 /**
 * Lang Selector
@@ -368,15 +364,6 @@ a.title-archive:hover {
   color: #000;
   margin-top: 10px;
   margin-bottom:10px;
-  padding: 0 190px;
-}
-
-.titlepag-spare {
-  padding: 0 190px;
-}
-
-.last {
-  margin-bottom: 50px;
 }
 
 .border-spare {
@@ -540,7 +527,7 @@ a.title-archive:hover {
           pointer-events: none;
         }
 
-        // Decorações nos menus de navegação
+        // Decoraï¿½ï¿½es nos menus de navegaï¿½ï¿½o
         &.menu-item-58:before,
         &.menu-item-67:before {
           content: url(assets/images/detalhe1.png);
@@ -642,39 +629,39 @@ a.title-archive:hover {
   }
 
   // Adiciona um efeito no before da imagem
-  // do quadrinho que é simplesmente sensacional... ou não
-  body.home {
-    section.wrapper-content {
-      aside.container {
-        width: 100%;
-        .hqimg{
-          p{
-            position: relative;
-            &:before{
-              content: 'Clique para ver em tamanho real';
-              top: 50%;
-              left: 50%;
-              position: absolute;
-              z-index: 1000;
-              -webkit-transform: translate(-50%, -50%);
-              -ms-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-              font-size: 1.7em;
-              text-align: center;
-              width: 100%;
-            }
-            del{
-              &:after{
-                content: ' ';
-                position: absolute;
-                top: 2%;
-                left: 2%;
-                width: 95%;
-                height: 95%;
-                background: rgba(250,250,250, 0.8);
-                border: 1px solid #efefef;
-              }
-            }
+  // do quadrinho que ï¿½ simplesmente sensacional... ou nï¿½o
+  .hq-container{
+    .hq-image{
+      .img-wrapper{
+        position: relative;
+        &:before {
+          background-image: url(assets/images/zoom.png);
+          background-repeat: no-repeat;
+          background-size: 100px 100px;
+          background-position: center;
+          content: ' ';
+          top: 50%;
+          left: 50%;
+          position: absolute;
+          z-index: 1000;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+          font-size: 1.7em;
+          text-align: center;
+          width: 100%;
+          height: 100px;
+        }
+        p{
+          &:after{
+            content: ' ';
+            position: absolute;
+            top: 2%;
+            left: 2%;
+            width: 95%;
+            height: 95%;
+            background: rgba(250,250,250, 0.8);
+            border: 1px solid #efefef;
           }
         }
       }
